@@ -27,7 +27,7 @@ def merge_args(exter_args):
     args.downsample_test = 1.0
     args.model_name = "TensorVMSplit"
     args.batch_size = exter_args.batch_size
-    args.n_iters = 1000  #30000
+    args.n_iters = 30000  #30000
     args.dataset_name = TensoRFNameDic.get(args.nerf_dataset, "own_data")
 
     # learning rate

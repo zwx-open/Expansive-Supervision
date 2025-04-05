@@ -30,6 +30,41 @@ consumption. Experimental results demonstrate that integrating
 Expansive Supervision within existing state-of-the-art acceleration frameworks achieves 52% memory savings and 16% time
 savings while maintaining comparable visual quality
 
+# Quick Start
+## Clone Repository
+```shell
+git clone https://github.com/zwx-open/Expansive-Supervision
+cd Expansive-Supervision
+```
+## Dataset 
+Download Corresponeding Dataset under the folder of `./data/`:
+* [Synthetic-NeRF](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) 
+* [Synthetic-NSVF](https://dl.fbaipublicfiles.com/nsvf/dataset/Synthetic_NSVF.zip)
+* [Tanks&Temples](https://dl.fbaipublicfiles.com/nsvf/dataset/TanksAndTemple.zip)
+* [Forward-facing](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
+
+More detials can be found in [TensoRF](http://github.com/apchenstu/TensoRF)
+
+## Enviroment Setup
+Tested Enviroments:
+- Ubuntu 20.04 with PyTorch 1.12.1 & CUDA 11.3.1 on RTX 3090
+
+## Run the Code
+We have prepared configuration for runnning baselines with `lego` scenes in `nerf-syn` dataset.
+Just uncomment corresponding functions in `run.py`:
+```py
+if __name__ == "__main__":
+    run_standard_nerf(use_cuda=0)
+    # run_egra_nerf(use_cuda=1)
+    # run_soft_nerf(use_cuda=2)
+    # run_expansive_nerf(use_cuda=3)
+```
+
+If you want to run all scenes in one shot, please use `--multi_data"` in args.
+
+For more coinfiguration, please refer to `./opt.py` and `./components/tesorf/tensorf_opt.py`.
+
+
 
 # Additional Related Research
 Welcome to explore our related research. The source code for all works has been available.
@@ -43,6 +78,11 @@ Welcome to explore our related research. The source code for all works has been 
 [[code]](https://github.com/zwx-open/Symmetric-Power-Transformation-INR) | 
 - Recent Progress of Implicit Neural Representations | 
 [[code]](https://github.com/zwx-open/Recent-Progress-of-INR)
+
+# Acknowledgments
+We thank the authors of the following works for releasing their codebases:
+- [TensoRF](https://github.com/apchenstu/TensoRF)
+- [Soft Mining](https://github.com/ubc-vision/nf-soft-mining)
 
 # Citation
 Please consider leaving a ⭐ and citing our paper if you find this project helpful:
