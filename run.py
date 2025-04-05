@@ -14,8 +14,6 @@ def run_standard_nerf(use_cuda=0):
         "radiance_field",
         "--nerf_dataset",
         "syn",
-        "--nerf_scene",
-        "lego",
         "--nerf_backbone",
         "tensorf",
         "--strategy",
@@ -26,6 +24,8 @@ def run_standard_nerf(use_cuda=0):
         "0.0001",
         "--up_folder_name",
         "nerf_syn",
+        "--nerf_scene",
+        "lego",
         # "--multi_data",
         
     ]
