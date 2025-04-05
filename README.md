@@ -43,7 +43,7 @@ Download Corresponeding Dataset under the folder of `./data/`:
 * [Tanks&Temples](https://dl.fbaipublicfiles.com/nsvf/dataset/TanksAndTemple.zip)
 * [Forward-facing](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
 
-More detials can be found in [TensoRF](http://github.com/apchenstu/TensoRF)
+More detials can be found in [TensoRF](http://github.com/apchenstu/TensoRF).
 
 ## Enviroment Setup
 Tested Enviroments:
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # run_expansive_nerf(use_cuda=3)
 ```
 
-If you want to run all scenes in one shot, please use `--multi_data"` in args.
+If you want to run all scenes in one shot, please use `--multi_data` in args.
 
 For more coinfiguration, please refer to `./opt.py` and `./components/tesorf/tensorf_opt.py`.
 
